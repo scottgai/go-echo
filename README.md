@@ -5,7 +5,7 @@ A simple HTTP echo server
 
 Echo a simple string
 ```
-curl -X POST -d"this is a test" https://my-app.com/echo
+curl -X POST -d "this is a test" https://my-app.com/echo
 this is a test%
 ```
 
