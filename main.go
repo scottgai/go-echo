@@ -25,7 +25,7 @@ func main() {
 					fmt.Printf("Wrote %d bytes\n", nn)
 
 					if err != nil {
-						fmt.Println("ERROR: ", err)
+						fmt.Println("ERROR (write): ", err)
 						break
 					}
 				}
@@ -39,6 +39,8 @@ func main() {
 						if err != nil {
 							fmt.Println("ERROR (body.Close): ", err)
 						}
+					} else {
+						fmt.Println("ERROR (read): ", err)
 					}
 					break
 				}
