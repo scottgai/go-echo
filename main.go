@@ -8,8 +8,8 @@ import (
 
 func main() {
 
-	echo1()
-	//echo2()
+	//echo1()
+	echo2()
 }
 
 func echo1() {
