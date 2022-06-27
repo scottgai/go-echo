@@ -4,12 +4,13 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
+	"strconv"
 )
 
 func main() {
 
-	//echo1()
-	echo2()
+	echo1()
+	//echo2()
 }
 
 func echo1() {
@@ -21,6 +22,9 @@ func echo1() {
 
 			buf, err := ioutil.ReadAll(r.Body)
 			fmt.Printf("Read %d bytes\n", len(buf))
+
+			//set Context-Length header
+			w.Header().Set("Content-Length", strconv.Itoa(len(buf)))
 
 			nn, err := w.Write(buf)
 			fmt.Printf("Wrote %d bytes\n", nn)
