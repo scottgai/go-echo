@@ -2,5 +2,7 @@
 applications:
   - name: go-echo
     memory: 128M
+    buildpacks:
+    - go_buildpack
     instances: 1
     path: .
